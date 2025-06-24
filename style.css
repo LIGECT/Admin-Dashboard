@@ -48,6 +48,74 @@ a {
 .header {
   border: 1px solid #000;
   grid-area: header;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.user-dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1% 5% 1% 5%;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  min-width: calc(60% - 20px);
+  max-width: calc(75% + 20px);
+}
+
+.search-bar img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.user-profile-info {
+  display: flex;
+  width: 300px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bell-ring {
+  width: 25px;
+}
+
+.user-avatar {
+  width: 45px;
+}
+
+input[type="text"] {
+  border: none;
+  background-color: #fff5eb;
+  border-radius: 12px;
+  height: 35px;
+  min-width: calc(97% - 20px);
+  max-width: calc(75% + 20px);
+  outline: none;
+  padding: 12px;
+  font-size: 16px;
+  font-family: "IBM Plex Sans";
+}
+
+input[type="text"]:focus {
+  color: #000000;
+  border: 2px inset #be9061;
+}
+
+.welcome-panel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.welcome-message img {
+  width: 85px;
 }
 
 .sidebar {
