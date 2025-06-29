@@ -235,3 +235,13 @@ input[type="text"]:focus {
   border: 1px solid #000;
   grid-area: main;
 }
+
+.icon-star,
+.icon-eye,
+.icon-share {
+  width: 25px;
+}
+
+.trending-avatar {
+  width: 50px;
+}
