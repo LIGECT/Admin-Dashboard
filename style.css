@@ -34,6 +34,10 @@ a {
   font-size: larger;
 }
 
+h1 {
+  font-size: 26px;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: 250px 1fr;
@@ -177,7 +181,8 @@ input[type="text"]:focus {
 }
 
 .welcome-message img {
-  width: 85px;
+  height: 105px;
+  width: auto;
 }
 
 .sidebar {
