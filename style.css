@@ -240,8 +240,9 @@ input[type="text"]:focus {
   grid-area: main;
   display: grid;
   background-color: #fff5eb;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 50px 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-template-rows: 50px 260px 260px 260px;
+  gap: 10px;
 }
 
 .main-content > h2:nth-child(1) {
@@ -286,10 +287,12 @@ input[type="text"]:focus {
 
 .right-sidebar {
   display: grid;
+  grid-template-columns: min-content;
   grid-template-rows: 1.5fr 1.5fr;
   height: 100%;
   grid-column: 3/4;
   grid-row: 1/5;
+  justify-content: start;
 }
 
 .announcements-section {
