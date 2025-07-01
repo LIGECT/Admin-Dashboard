@@ -37,12 +37,15 @@ a {
 .wrapper {
   display: grid;
   grid-template-columns: 250px 1fr;
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: auto 1fr;
   grid-template-areas:
     "sidebar header"
     "sidebar main";
   height: 100vh;
   width: 100%;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .header {
@@ -54,6 +57,8 @@ a {
   align-items: stretch;
   z-index: 1;
   box-shadow: 0 6px 12px rgba(227, 155, 79, 0.3);
+  width: 100%;
+  max-width: calc(100vw - 250px);
 }
 
 .user-dashboard {
@@ -234,10 +239,12 @@ input[type="text"]:focus {
 .main-content {
   grid-area: main;
   display: grid;
-  grid-template-columns: 2fr 1fr;
   background-color: #fff5eb;
+  gap: 20px;
+  width: 100%;
+  max-width: calc(100vw - 250px);
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  align-items: center;
 }
 
 .icon-star,
@@ -251,12 +258,11 @@ input[type="text"]:focus {
 }
 
 .projects-section {
-  grid-column: 1 / 2;
-  grid-row: 1 / 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 50px 1fr;
   gap: 20px;
+  align-content: start;
 }
 
 .project-section-title {
@@ -319,6 +325,54 @@ input[type="text"]:focus {
 }
 
 .right-sidebar {
-  grid-column: 2 / 3;
-  grid-row: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: -20px;
+  width: 100%;
+}
+
+.announcements-section {
+  /* width: 300px; */
+}
+
+.trending-section {
+  width: 100%;
+}
+
+.announcement-card-block {
+  padding: 15px;
+  background-color: white;
+  border-radius: 1pc;
+  width: 400px;
+  box-shadow: 0 8px 24px rgba(227, 155, 79, 0.3);
+}
+
+.trending-item-block {
+  padding: 15px;
+  width: 250px;
+  background-color: white;
+  border-radius: 1pc;
+  box-shadow: 0 8px 24px rgba(227, 155, 79, 0.3);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.trending-item {
+  display: flex;
+  gap: 20px;
+}
+
+.trending-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-between;
+  gap: 3px;
+}
+
+.trending-username {
+  font-weight: 600;
 }
