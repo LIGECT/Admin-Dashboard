@@ -203,9 +203,19 @@ input[type="text"]:focus {
   gap: 20px;
 }
 
+.sidebar-menu-item:hover {
+  transform: translateX(3px);
+  cursor: pointer;
+}
+
 .sidebar-menu-item img {
   margin-right: 10px;
   width: 23px;
+}
+
+.sidebar-menu-item:hover .item-text {
+  color: #a03c00;
+  font-weight: 600;
 }
 
 .menu {
@@ -341,6 +351,14 @@ input[type="text"]:focus {
   align-items: flex-start;
   box-shadow: 0 8px 32px 0 rgba(58, 167, 212, 0.32),
     0 3px 12px 0 rgba(252, 179, 106, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(58, 167, 212, 0.4),
+    0 6px 20px rgba(252, 179, 106, 0.3);
+  cursor: pointer;
 }
 
 .project-actions {
