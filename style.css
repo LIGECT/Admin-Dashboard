@@ -284,14 +284,22 @@ input[type="text"]:focus {
   grid-row: 4;
 }
 
+.right-sidebar {
+  display: grid;
+  grid-template-rows: 1.5fr 1.5fr;
+  height: 100%;
+  grid-column: 3/4;
+  grid-row: 1/5;
+}
+
 .announcements-section {
   grid-column: 3/4;
-  grid-row: 2/3;
+  grid-row: 1/2;
 }
 
 .trending-section {
   grid-column: 3/4;
-  grid-row: 3/5;
+  grid-row: 2/5;
 }
 
 .icon-star,
